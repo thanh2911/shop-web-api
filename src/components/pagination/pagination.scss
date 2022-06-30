@@ -1,0 +1,27 @@
+@use '../../scss/' as * ;
+
+.pagination {
+    display:  flex;
+    justify-content: center;
+    
+    &-center {
+        display: flex;
+        border: 1px solid rgb(224, 221, 221);
+        li {      
+
+            span {
+                padding: 0.5rem;
+                display: block;
+                z-index: 2;
+            }
+
+            &:hover ,  &.active , a:hover{
+                background-color: $main-color;
+                color: $txt-white ;
+            }
+
+
+             
+        }
+    }
+}

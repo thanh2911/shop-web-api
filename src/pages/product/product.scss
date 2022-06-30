@@ -1,0 +1,65 @@
+@use  '../../scss/' as *;
+.product {
+    padding: 50px;  
+    display: flex;
+
+    .category {
+        display: flex;
+        flex-direction: column;
+        width: 20%;
+        text-transform: capitalize;
+        line-height:2.5rem;
+        padding-left: 10px;
+        font-weight: 600;
+        font-size: 1.2rem;
+
+        li {
+            margin-right: 50px;
+
+            &.active {
+                background-color: red;
+            }
+        }
+    }
+
+    &-list {
+        flex: 1;
+    }
+
+    @include table {
+        flex-direction: column;
+        
+        .category {
+            width: 100%;
+            flex-direction: row;
+            margin-bottom: 30px;
+            
+            
+            ul {
+                display: flex;
+
+                li {
+                    margin-right: 20px;
+                }
+            }
+        }
+    }
+    @include mobile {
+        flex-direction: column;
+        
+        .category {
+            width: 100%;
+            flex-direction: row;
+            margin-bottom: 30px;
+            
+            
+            ul {
+                display: flex;
+                flex-wrap: wrap;
+                li {
+                    margin-right: 20px;
+                }
+            }
+        }
+    }
+}

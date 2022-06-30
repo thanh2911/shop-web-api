@@ -1,0 +1,53 @@
+@use '../../scss/' as * ; 
+
+.product-card {
+    width: 100%;
+    margin-bottom: 50px;
+    
+    
+    & > a {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 1px 1px 10px rgba(0,0,0, 0.5);
+
+        img {
+            width:100%;
+            height: 250px;
+            object-fit: cover;
+        }
+    }
+
+    &__title {
+        font-size: 1.3rem;
+        font-weight: 600;
+        margin: 10px 0;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        -webkit-line-clamp: 1;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        text-align: center;
+    }
+
+    &__price {
+        font-size: 1.2rem;
+        
+       * ~ * {
+        margin-left: 20px;
+       }
+
+       del {
+        color: gray;
+       }
+    }
+
+    button {
+        margin: 20px 0;
+    }
+   
+}
